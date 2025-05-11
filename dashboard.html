@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>SYNC - Dashboard</title>
-  <link rel="stylesheet" href="css/dashboard.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">My App</div>
+        <div class="nav-right">
+          <button class="profile-btn">Profile</button>
+          <button class="logout-btn"><a href="./index.html">Logout</a></button>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <aside>
+        <div class="special-req">
+            SYNC
+        </div>
+        <ul>
+          <li onclick="showContent('dashboard')">Dashboard</li>
+          <li onclick="showContent('leads')">Leads</li>
+          <li onclick="showContent('contact')">Contacts</li>
+          <li onclick="showContent('companies')">Companies</li>
+        </ul>
+      </aside>
+      <main id="content">
+        <div id="dashboard" class="content-section">
+          <h2>Dashboard</h2>
+          <button onclick="addTask()">Add Task</button>
+          <button onclick="deleteTask()">Delete Last Task</button>
+          <table id="taskTable">
+            <tr>
+              <th>Task Name</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+        </div>
 
-<div class="sidebar">
-  <h2>SYNC</h2>
-  <a href="#" onclick="showSection('dashboard')">Dashboard</a>
-  <a href="#" onclick="showSection('leads')">Leads</a>
-  <a href="#" onclick="showSection('companies')">Companies</a>
-  <a href="#" onclick="showSection('contacts')">Contacts</a>
-</div>
-
-<div class="main-content">
-  <div class="navbar">
-    <button id="profileButton">Profile</button>
-    <div id="profileDropdown" class="profile-dropdown">
-      <a href="#">Help</a>
-      <a href="login.html">Logout</a>
+        <div id="leads" class="content-section">
+          <h2>Leads</h2>
+          <button onclick="addRow('leadsTable')">Add Lead</button>
+          <table id="leadsTable">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Company</th>
+              <th>Status</th>
+              <th>Source</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+        </div>
+        <div id="contact" class="content-section">
+          <h2>Contacts</h2>
+          <button onclick="addRow('contactTable')">Add Contact</button>
+          <table id="contactTable">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Company</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+        </div>
+        <div id="companies" class="content-section">
+          <h2>Companies</h2>
+          <button onclick="addRow('companiesTable')">Add Company</button>
+          <table id="companiesTable">
+            <tr>
+              <th>Name</th>
+              <th>Industry</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </table>
+        </div>
+      </main>
     </div>
-  </div>
-
-  <!-- DASHBOARD -->
-  <section id="dashboard" class="content-section">
-    <h2>Dashboard</h2>
-    <button onclick="openModal('task')">Add Task</button>
-    <ul id="taskList"></ul>
-  </section>
-
-  <!-- LEADS -->
-  <section id="leads" class="content-section hidden">
-    <h2>Leads</h2>
-    <button onclick="openModal('lead')">Add Lead</button>
-    <table id="leadTable">
-      <thead>
-        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>Status</th><th>Source</th><th>Actions</th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </section>
-
-  <!-- COMPANIES -->
-  <section id="companies" class="content-section hidden">
-    <h2>Companies</h2>
-    <button onclick="openModal('company')">Add Company</button>
-    <table id="companyTable">
-      <thead><tr><th>Name</th><th>Industry</th><th>Contact</th><th>Actions</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </section>
-
-  <!-- CONTACTS -->
-  <section id="contacts" class="content-section hidden">
-    <h2>Contacts</h2>
-    <button onclick="openModal('contact')">Add Contact</button>
-    <table id="contactTable">
-      <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Company</th><th>Actions</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </section>
-</div>
-
-<!-- Task Modal -->
-<div id="taskModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('task')">&times;</span>
-    <h2>Add Task</h2>
-    <input type="text" id="taskInput" placeholder="Enter Task">
-    <button onclick="addTask()">Add</button>
-  </div>
-</div>
-
-<!-- Other modals (lead, company, contact)... -->
-<!-- You already have them, keep them as in your current HTML -->
-
-<script src="js/dashboard.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
