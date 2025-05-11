@@ -1,0 +1,237 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fdfdfd;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .navbar nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .navbar nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Banner */
+  .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 4rem 2rem;
+  }
+  .hero-text {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  .cta-button {
+    background: #ffffff;
+    color: #2575fc;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .cta-button:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Pricing Section */
+  .pricing-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+  }
+  .pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Reviews */
+  .reviews {
+    padding: 3rem 2rem;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    text-align: center;
+  }
+  .reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .review-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+  
+  /* Form Section (Login / Signup) */
+  .form-section {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .form-section form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .form-section input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  .form-section button {
+    padding: 0.8rem;
+    background: linear-gradient(to right, #43cea2, #185a9d);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .form-section button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Footer */
+  .footer {
+    background: linear-gradient(to right, #434343, #000000);
+    color: white;
+    padding: 3rem 2rem;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .footer-column h3, .footer-column h2 {
+    margin-bottom: 1rem;
+  }
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  .footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+  }
+  
+  .modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 20px;
+    color: #0d6efd;
+    text-align: center;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  
